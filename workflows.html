@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Orbit — Specialist Agent Operations | Agent workspace</title>
+  <link rel="stylesheet" href="agents.css"><link rel="stylesheet" href="workflows.css">
+</head>
+<body>
+  <aside><a class="brand" href="/"><span>◌</span>orbit<i>.</i></a><p class="brand-subtitle">SPECIALIST AGENT OPERATIONS</p><p class="nav-label">PLATFORM ADMIN</p><a class="nav" href="/">▦ Command center</a><a class="nav" href="/agents.html">✦ Agent registry</a><a class="nav active" href="/workflows.html">◉ Agent workspace</a><a class="nav" href="/audit.html">▤ Audit trail</a><div class="side-bottom"><div class="avatar">MK</div><div><b>Michael Kabongo</b><small>Local demo identity</small></div></div></aside>
+  <main>
+    <a class="back" href="/">← Command center</a>
+    <header><div><p class="eyebrow">GOVERNED SPECIALIST WORKFLOWS</p><h1>From intent to evidence.</h1><p>Run specialist agents in your team workspace, review approvals, and track workflow outcomes.</p></div><label class="team-picker">TEAM CONTEXT<select id="teamSelect" aria-label="Team context"></select></label></header>
+    <div class="simulation"><span>SIMULATION ADAPTERS</span><p>Workflow state and approvals are saved locally. Infrastructure, tickets, certificates, PRs and notifications are simulated. No external systems are changed. Identity uses the local demo user.</p></div>
+    <p id="error" class="error" role="alert"></p>
+    <section id="runMetrics" class="metrics"></section>
+    <div class="workspace-grid">
+      <section class="panel launch"><p class="eyebrow">SPECIALIST CATALOG</p><h2>Create a governed plan</h2><form id="launchForm"><label>Agent<select id="agentSelect" required></select></label><p id="agentDescription"></p><div id="inputFields"></div><details><summary>Configured team target</summary><pre id="targetPreview"></pre></details><button class="primary" id="createPlan">Create plan & run →</button></form></section>
+      <section class="panel history"><div class="panel-heading"><div><p class="eyebrow">DURABLE WORK</p><h2>Team workflows</h2></div><button class="secondary" id="refresh">Refresh</button></div><div id="runList"></div><div id="bindings"></div></section>
+    </div>
+    <section class="panel inventory-section" id="nodeInventorySection" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">TENANCY & COMPARTMENT INVENTORY</p><h2>Discover nodes before remediation</h2></div><div><a class="work-link" id="teamTenanciesLink" href="/team.html">Select team tenancies →</a> <button class="secondary" id="refreshInventory">Fetch updated nodes</button></div></div>
+      <p class="ticket-note">The agent discovers all Compute instances in the selected compartment and region. Inventory is saved with its fetch time. Only RUNNING nodes enter the serial plan. Every node’s preflight, drain, patch, reboot and restore step re-fetches inventory; changes require a new plan and approval. Remediation remains simulated.</p>
+      <div id="nodeInventorySummary"></div>
+      <details><summary>Configure a tenancy and compartment</summary>
+        <form id="inventoryScopeForm"><label>Known tenancy<select id="knownInventoryTenancy"><option value="">Enter a scope manually</option></select></label><label>Discover compartments<button type="button" class="secondary" id="discoverCompartments">Load tenancy compartments</button></label><label>Available compartments<select id="knownInventoryCompartment"><option value="">Load a tenancy first</option></select></label><label>Inventory scope<select id="inventoryScopeEditor"></select></label><label>Inventory scope name<input name="name" required maxlength="256"></label><label>Tenancy OCID<input name="tenancyId" required maxlength="256"></label><label>Compartment name<input name="compartmentName" required maxlength="120"></label><label>Compartment OCID<input name="compartmentId" required maxlength="256"></label><label>Region<input name="region" required maxlength="256"></label><label>Discovery provider<select name="adapter"><option value="simulation">Simulation</option><option value="oci-cli">OCI CLI (live read-only)</option></select></label><label>Server OCI CLI profile name<input name="profileName" placeholder="DEFAULT" maxlength="256"></label><label>Simulation nodes (one per line)<textarea name="demoNodes" rows="3"></textarea></label><p class="ticket-note">Use the server’s existing OCI profile reference. Credentials stay outside this application. Live discovery reads the chosen compartment; it does not patch or reboot resources.</p><button class="primary">Save inventory scope</button></form>
+        <h3>Add a compartment to this team’s list</h3><form id="compartmentCatalogForm"><p class="ticket-note">Save a compartment for the selected known tenancy, or leave the tenancy unselected to save a name for onboarding. A compartment OCID is required before live inventory discovery.</p><label>Compartment name<input name="name" required maxlength="120" placeholder="e.g. oit-services-oke"></label><label>Compartment ID (OCID)<input name="compartmentId" maxlength="256" placeholder="ocid1.compartment…"><small>Optional during onboarding. Enter the ID to fill it automatically when selected.</small></label><button class="secondary">Save compartment</button><p id="compartmentCatalogMessage" class="ticket-note" role="status"></p></form>
+      </details>
+    </section>
+    <section class="panel ticket-intake"><div class="panel-heading"><div><p class="eyebrow">JIRA TICKET INTAKE</p><h2>From ticket to governed work</h2></div><div><a class="work-link" id="jiraConfigLink" href="/team.html">Configure team queue →</a> <button class="secondary" id="simulateTicket">＋ Simulate ticket created</button></div></div><p class="ticket-note">Ticket intake runs automatically. The local demo can simulate a ticket event; receiving real Jira events requires a configured team webhook. All downstream agent work remains simulated.</p><div id="jiraTicketList"></div><form id="ticketDemoForm" hidden><label>Jira connection<select name="connectionId" id="demoJiraConnection"></select></label><label>Ticket key<input name="ticket" required></label><label>Summary<input name="summary" required maxlength="1000" placeholder="e.g. Application latency increased"></label><label>Description<textarea name="description" maxlength="1000"></textarea></label><button class="primary">Create simulated ticket</button><button type="button" class="secondary" id="cancelTicketDemo">Cancel</button></form></section>
+    <section class="panel run-detail" id="runDetail" aria-live="polite"><div class="empty-state"><span>◉</span><h2>Your next action starts with a plan.</h2><p>Choose a specialist to preview its target and inputs, or open a saved workflow.</p></div></section>
+  </main>
+  <script src="workflows.js"></script>
+</body>
+</html>

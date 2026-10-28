@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit — Specialist Agent Operations | Team Workspace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="team.css?v=17" />
+  </head>
+  <body>
+    <aside>
+      <a class="brand" href="/"><span>◌</span>orbit<i>.</i></a><p class="brand-subtitle">SPECIALIST AGENT OPERATIONS</p>
+      <p class="nav-label">TEAM WORKSPACE</p>
+      <a class="nav active" href="#overview">▦ Overview</a>
+      <a class="nav" href="#architecture">◫ Architecture</a>
+      <a class="nav" href="#governance">◇ Governance</a>
+      <a class="nav" href="#operations">◉ Operations</a>
+      <a class="nav" id="workspaceLink" href="/workflows.html">✦ Agent workspace</a>
+      <a class="nav" href="#teamTenancies">◎ Tenancies & compartments</a>
+      <a class="nav" href="#jiraIntake">▤ Jira queue</a>
+      <a class="nav" href="#costs">$ Cost & utilization</a>
+      <div class="side-bottom"><div class="avatar">MK</div><div><b>Michael Kabongo</b><small>Platform admin</small></div></div>
+    </aside>
+    <main>
+      <a class="back" href="/">← Platform command center</a>
+      <section class="hero" id="overview">
+        <div class="team-mark" id="teamMark">EE</div>
+        <div><p class="eyebrow">GOVERNED TEAM WORKSPACE <span>●</span> CONNECTED</p><h1 id="teamName">Loading team…</h1><p id="teamDescription">Loading team context from the governance control plane.</p></div>
+        <button class="new-task" id="newTask">Run a governed task →</button>
+      </section>
+      <section class="status-row">
+        <article><span class="icon purple">◌</span><p><small>TEAM TRUST SCORE</small><b>94 / 100</b><em>Excellent</em></p></article>
+        <article><span class="icon green">✓</span><p><small>POLICY COMPLIANCE</small><b>99.98%</b><em>All controls active</em></p></article>
+        <article><span class="icon blue">◴</span><p><small>ACTIVE AGENTS</small><b id="agentCount">0</b><em>Reusable capabilities</em></p></article>
+        <article><span class="icon orange">▤</span><p><small>OPEN REQUESTS</small><b id="taskCount">0</b><em>Governed actions</em></p></article>
+      </section>
+      <section class="flow-panel" id="liveRequest">
+        <div class="flow-heading"><div><p class="eyebrow">LIVE REQUEST · TEAM-SCOPED</p><h2>Governance flow</h2></div><span class="flow-status" id="flowStatus">No active request</span></div>
+        <div id="teamFlow"></div>
+      </section>
+      <section class="approver-panel">
+        <div class="flow-heading"><div><p class="eyebrow">TEAM APPROVAL ROUTING</p><h2>Designated approvers</h2></div><button class="add-approver" id="addApprover">＋ Add approver</button></div>
+        <p class="approver-intro">Choose the people authorized to approve this team’s production requests. High-risk tasks are routed to one of these approvers.</p>
+        <div class="approver-list" id="approverList"></div>
+      </section>
+      <section class="section" id="architecture">
+        <div class="section-title"><div><p class="eyebrow">TEAM ARCHITECTURE</p><h2>Your route through the control plane</h2></div><p>The team owns its connections and expertise; the platform provides the shared controls.</p></div>
+        <div class="layer-grid">
+          <article class="layer access"><span>01</span><h3>Access & integration</h3><p>Entry points owned by this team.</p><div class="chips" id="integrations"></div></article>
+          <article class="layer identity"><span>02</span><h3>Identity & context</h3><p>Shared SSO, roles, entitlements, and team isolation.</p><div class="chips"><b>SSO / OIDC</b><b>Team resolver</b><b>Production context</b></div></article>
+          <article class="layer governance"><span>03</span><h3>Governance control plane</h3><p>Policies and approvals evaluated before every action.</p><div class="chips" id="policyChips"></div></article>
+          <article class="layer intelligence"><span>04</span><h3>Intelligence layer</h3><p>LLM gateway, RAG, planning, evaluation, and guardrails.</p><div class="chips"><b>LLM gateway</b><b>RAG context</b><b>Evaluation</b></div></article>
+          <article class="layer agents"><span>05</span><h3>Specialist agents</h3><p>Shared agents plus your team-scoped capabilities.</p><div class="chips" id="agentChips"></div></article>
+          <article class="layer tools"><span>06</span><h3>Tools & system integration</h3><p>Secure adapters with controlled API access.</p><div class="chips"><b>API gateway</b><b>Rate limiting</b><b>MCP / tools</b></div></article>
+          <article class="layer data"><span>07</span><h3>Data & knowledge</h3><p>Isolated knowledge, audit records, and telemetry.</p><div class="chips"><b>Knowledge base</b><b>Audit logs</b><b>Metrics</b></div></article>
+          <article class="layer safety"><span>08</span><h3>Infrastructure safety</h3><p>Sandboxing, rollback, secrets, and recovery controls.</p><div class="chips"><b>Sandbox</b><b>Rollback</b><b>Secrets</b></div></article>
+        </div>
+      </section>
+      <section class="agent-section" id="agents">
+        <div class="section-title"><div><p class="eyebrow">GOVERNED AGENT CATALOG</p><h2>Shared capabilities, dedicated ownership.</h2></div><button class="add-agent" id="addAgent">＋ Add dedicated agent</button></div>
+        <p class="agent-intro">Your team can use every platform-shared agent. Dedicated agents stay in this team’s tenant boundary until a platform review promotes them to the shared catalog.</p>
+        <div class="agent-catalog" id="agentCatalog"></div>
+      </section>
+      <section class="two-col" id="governance">
+        <article class="panel"><div class="panel-title"><div><p class="eyebrow">GOVERNANCE CONTROLS</p><h2>What protects your work</h2></div><a href="/">Manage →</a></div><div class="controls" id="controls"></div></article>
+        <article class="panel" id="operations"><div class="panel-title"><div><p class="eyebrow">TEAM ACTIVITY</p><h2>Governed work</h2></div><a href="/">View all →</a></div><div class="tasks" id="tasks"></div></article>
+      </section>
+      <section class="panel team-tenancies" id="teamTenancies">
+        <div class="flow-heading"><div><p class="eyebrow">TEAM INFRASTRUCTURE SCOPE</p><h2>Tenancies & compartments</h2></div></div>
+        <p>Check the tenancies your team uses. Add each associated compartment name and OCID. Saved selections become the team’s live vulnerability inventory scopes.</p>
+        <form id="teamTenancyForm"><div id="teamTenancyChoices"></div><button class="add-agent">Save team tenancies</button></form><p id="teamTenancyMessage" role="status"></p>
+      </section>
+      <section class="panel jira-panel" id="jiraIntake">
+        <div class="flow-heading"><div><p class="eyebrow">EVENT-DRIVEN TICKET INTAKE</p><h2>Team Jira connections</h2></div><span id="jiraConnectionStatus"></span></div>
+        <p>New Jira tickets start the Ticket Management Agent automatically. It classifies the request and routes supported work to a specialist or your team owner.</p>
+        <div class="jira-connection-toolbar"><label>Jira connection<select id="jiraConnectionSelect"></select></label><button class="add-agent" id="addJiraConnection">＋ Add Jira connection</button></div>
+        <div id="jiraConnections"></div>
+        <p>Each connection keeps its own Jira URL, project, queues and optional description. Saving these details does not require a token.</p>
+        <form id="jiraConfigForm" class="jira-config-grid">
+          <label>Jira site URL<input name="siteUrl" type="url" required placeholder="https://your-team.atlassian.net"></label>
+          <label>Jira queue names<textarea name="queueNames" required maxlength="1300" placeholder="One queue name per line" rows="3"></textarea></label>
+          <label class="jira-description">Description (optional)<textarea name="description" maxlength="2000" placeholder="Describe the work handled by these queues" rows="3"></textarea></label>
+          <label>Project key<input name="projectKey" required placeholder="OPS"></label>
+          <label>Queue label (optional)<input name="queueLabel" placeholder="team-operations"></label>
+          <label>Ticket intake type<select name="ticketKind"><option value="auto">Automatic classification</option><option value="service_request">Service requests</option><option value="incident">Incidents</option></select></label>
+          <label class="jira-enable"><input name="enabled" type="checkbox"> Enable live webhook intake for this connection</label>
+          <button class="add-agent">Save Jira connection</button>
+        </form>
+        <p id="jiraConfigMessage" role="status"></p>
+        <details class="jira-live-details"><summary>Live event delivery setup</summary><div id="jiraSetup"></div></details>
+      </section>
+      <section class="cost-panel" id="costs">
+        <div class="flow-heading"><div><p class="eyebrow">TEAM CHARGEBACK</p><h2>Cost & utilization</h2></div><div class="cost-actions"><button id="downloadStatement">↓ Download statement</button><a class="cost-report-link" id="costReportLink" href="/costs.html">Open chargeback report →</a></div></div>
+        <p class="cost-period" id="costPeriod"></p><div class="cost-metrics" id="costMetrics"></div><div class="cost-breakdown" id="costBreakdown"></div><div class="cost-insights" id="costInsights"></div><details class="cost-help"><summary>How costs are calculated</summary><div><p><b>Direct usage</b> is cost created specifically by this team’s work: model and token consumption, agent executions, tool and API calls, dedicated infrastructure, and team-specific data retrieval.</p><p><b>Shared allocation</b> is this team’s transparent share of platform services used by all teams, including governance controls, shared agents, the model gateway, monitoring, audit, security, and shared storage.</p><p>The shared platform pool is allocated by each team’s percentage of governed executions. More executions means a larger share of shared platform cost.</p></div></details>
+      </section>
+    </main>
+    <div class="modal-backdrop" id="modal"></div>
+    <script src="team.js?v=21"></script>
+  </body>
+</html>

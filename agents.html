@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit — Specialist Agent Operations | Agent Registry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="agents.css?v=2" />
+  </head>
+  <body>
+    <aside>
+      <a class="brand" href="/"><span>◌</span>orbit<i>.</i></a><p class="brand-subtitle">SPECIALIST AGENT OPERATIONS</p>
+      <p class="nav-label">PLATFORM ADMIN</p>
+      <a class="nav" href="/">▦ Command center</a>
+      <a class="nav active" href="/agents.html">✦ Agent registry</a><a class="nav" href="/workflows.html">◉ Agent workspace</a>
+      <div class="side-bottom"><div class="avatar">MK</div><div><b>Michael Kabongo</b><small>Platform admin</small></div></div>
+    </aside>
+    <main>
+      <a class="back" href="/">← Command center</a>
+      <header><div><p class="eyebrow">PLATFORM AGENT GOVERNANCE</p><h1>Agent registry</h1><p>Manage the shared catalog and every team’s dedicated capabilities from one governed view.</p></div></header>
+      <section class="metrics" id="metrics"></section>
+      <section class="registry">
+        <div class="registry-title"><div><p class="eyebrow">ALL AGENTS</p><h2>Catalog access and ownership</h2></div><span>Changes are recorded in the audit trail</span></div>
+        <div class="filters" id="filters"><button class="active" data-filter="all">All agents</button><button data-filter="shared">Shared</button><button data-filter="dedicated">Dedicated</button><button data-filter="unshared">Unshared</button></div>
+        <div class="agent-list" id="agentList"></div>
+      </section>
+    </main>
+    <div class="modal-backdrop" id="modal"></div>
+    <script src="agents.js?v=1"></script>
+  </body>
+</html>

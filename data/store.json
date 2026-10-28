@@ -1,0 +1,1921 @@
+{
+  "organizations": [
+    {
+      "id": "ee-orchestration",
+      "name": "EE Orchestration",
+      "description": "Enterprise execution orchestration",
+      "integrations": [
+        "Web portal",
+        "REST / GraphQL",
+        "Jira",
+        "Scheduled jobs"
+      ],
+      "approvers": [
+        "EE Orchestration Lead",
+        "Kip Larsen",
+        "Michael Kabongo"
+      ],
+      "agentTarget": {
+        "tenancy": "demo-ee-orchestration",
+        "region": "demo-region",
+        "cluster": "demo-cluster",
+        "namespace": "ee-orchestration",
+        "repository": "demo/ee-orchestration",
+        "sourcePaths": [
+          "deploy/values.yaml",
+          "certificates/public.pem"
+        ],
+        "allowedNodes": [
+          "node-1",
+          "node-2",
+          "node-3"
+        ],
+        "allowedTools": [
+          "inventory",
+          "scanner",
+          "kubernetes",
+          "package-manager",
+          "health",
+          "knowledge",
+          "github",
+          "deployment",
+          "jira",
+          "cmc",
+          "certificate-validator",
+          "notification",
+          "metrics"
+        ]
+      },
+      "jira": {
+        "enabled": true,
+        "ticketKind": "incident",
+        "siteUrl": "https://jira-sd.mc1.oracleiaas.com",
+        "projectKey": "EEORCH",
+        "queueNames": [
+          "EE Orchestration"
+        ],
+        "description": "",
+        "queueLabel": "",
+        "tokenReference": "ORBIT_JIRA_WEBHOOK_TOKEN_EE_ORCHESTRATION",
+        "id": "legacy"
+      },
+      "jiraConnections": [
+        {
+          "enabled": true,
+          "ticketKind": "incident",
+          "siteUrl": "https://jira-sd.mc1.oracleiaas.com",
+          "projectKey": "EEORCH",
+          "queueNames": [
+            "EE Orchestration"
+          ],
+          "description": "",
+          "queueLabel": "",
+          "tokenReference": "ORBIT_JIRA_WEBHOOK_TOKEN_EE_ORCHESTRATION",
+          "id": "legacy"
+        },
+        {
+          "id": "de114163-2543-4de5-ae7e-1c77eb765664",
+          "enabled": false,
+          "ticketKind": "service_request",
+          "siteUrl": "https://jira.oraclecorp.com/jira",
+          "projectKey": "EEOKE",
+          "queueNames": [
+            "OKE Suite Development and Support"
+          ],
+          "description": "",
+          "queueLabel": "",
+          "tokenReference": "ORBIT_JIRA_WEBHOOK_TOKEN_EE_ORCHESTRATION_DE114163_2543_4DE5_AE7E_1C77EB765664"
+        }
+      ],
+      "availableCompartments": [
+        {
+          "name": "oit-services-oke",
+          "id": "ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+          "profileName": "devapp"
+        },
+        {
+          "name": "oit-service-test",
+          "id": "ocid1.compartment.oc1.aaaaaaaaaaaaa12345",
+          "profileName": "devapp"
+        }
+      ]
+    },
+    {
+      "id": "computer-ops",
+      "name": "Computer Ops",
+      "description": "Infrastructure operations",
+      "integrations": [
+        "Slack",
+        "OKE APIs",
+        "OCI resources",
+        "Vulnerability scans"
+      ],
+      "approvers": [
+        "Computer Ops Lead"
+      ],
+      "agentTarget": {
+        "tenancy": "demo-computer-ops",
+        "region": "demo-region",
+        "cluster": "demo-cluster",
+        "namespace": "computer-ops",
+        "repository": "demo/computer-ops",
+        "sourcePaths": [
+          "deploy/values.yaml",
+          "certificates/public.pem"
+        ],
+        "allowedNodes": [
+          "node-1",
+          "node-2",
+          "node-3"
+        ],
+        "allowedTools": [
+          "inventory",
+          "scanner",
+          "kubernetes",
+          "package-manager",
+          "health",
+          "knowledge",
+          "github",
+          "deployment",
+          "jira",
+          "cmc",
+          "certificate-validator",
+          "notification",
+          "metrics"
+        ]
+      },
+      "jiraConnections": [],
+      "jira": null
+    },
+    {
+      "id": "asd",
+      "name": "ASD",
+      "description": "Application support and delivery",
+      "integrations": [
+        "Web portal",
+        "REST / GraphQL",
+        "Jira",
+        "Slack",
+        "Scheduled jobs"
+      ],
+      "approvers": [
+        "ASD Lead"
+      ],
+      "jiraConnections": [],
+      "agentTarget": {
+        "tenancy": "demo-asd",
+        "region": "demo-region",
+        "cluster": "demo-cluster",
+        "namespace": "asd",
+        "repository": "demo/asd",
+        "sourcePaths": [
+          "deploy/values.yaml",
+          "certificates/public.pem"
+        ],
+        "allowedNodes": [
+          "node-1",
+          "node-2",
+          "node-3"
+        ],
+        "allowedTools": [
+          "inventory",
+          "scanner",
+          "kubernetes",
+          "package-manager",
+          "health",
+          "knowledge",
+          "github",
+          "deployment",
+          "jira",
+          "cmc",
+          "certificate-validator",
+          "notification",
+          "metrics"
+        ]
+      },
+      "jira": null
+    },
+    {
+      "id": "cman",
+      "name": "CMAN",
+      "description": "Connection Manager",
+      "integrations": [
+        "Web portal",
+        "REST / GraphQL",
+        "Jira",
+        "Slack",
+        "Scheduled jobs"
+      ],
+      "approvers": [
+        "cman Lead"
+      ],
+      "jiraConnections": [],
+      "agentTarget": {
+        "tenancy": "demo-cman",
+        "region": "demo-region",
+        "cluster": "demo-cluster",
+        "namespace": "cman",
+        "repository": "demo/cman",
+        "sourcePaths": [
+          "deploy/values.yaml",
+          "certificates/public.pem"
+        ],
+        "allowedNodes": [
+          "node-1",
+          "node-2",
+          "node-3"
+        ],
+        "allowedTools": [
+          "inventory",
+          "scanner",
+          "kubernetes",
+          "package-manager",
+          "health",
+          "knowledge",
+          "github",
+          "deployment",
+          "jira",
+          "cmc",
+          "certificate-validator",
+          "notification",
+          "metrics"
+        ]
+      },
+      "jira": null
+    },
+    {
+      "id": "apex-platform-services",
+      "name": "APEX Platform Services",
+      "description": "APEX platform services",
+      "integrations": [
+        "Web portal",
+        "REST / GraphQL",
+        "Jira",
+        "Slack",
+        "Scheduled jobs"
+      ],
+      "approvers": [
+        "APEX Platform Services Lead"
+      ],
+      "jiraConnections": [],
+      "agentTarget": {
+        "tenancy": "demo-apex-platform-services",
+        "region": "demo-region",
+        "cluster": "demo-cluster",
+        "namespace": "apex-platform-services",
+        "repository": "demo/apex-platform-services",
+        "sourcePaths": [
+          "deploy/values.yaml",
+          "certificates/public.pem"
+        ],
+        "allowedNodes": [
+          "node-1",
+          "node-2",
+          "node-3"
+        ],
+        "allowedTools": [
+          "inventory",
+          "scanner",
+          "kubernetes",
+          "package-manager",
+          "health",
+          "knowledge",
+          "github",
+          "deployment",
+          "jira",
+          "cmc",
+          "certificate-validator",
+          "notification",
+          "metrics"
+        ]
+      },
+      "jira": null
+    }
+  ],
+  "policies": [
+    {
+      "id": "production-approval",
+      "name": "Production change approval",
+      "description": "Human-in-the-loop required",
+      "enabled": true
+    },
+    {
+      "id": "tenant-isolation",
+      "name": "Tenant data isolation",
+      "description": "Organization scope enforced",
+      "enabled": true
+    },
+    {
+      "id": "cost-threshold",
+      "name": "Cost threshold",
+      "description": "Estimated run cost: $42.80",
+      "enabled": true
+    }
+  ],
+  "agents": [
+    {
+      "id": "oke-vulnerabilities",
+      "name": "Vulnerability Remediation Agent",
+      "domain": "Infrastructure security",
+      "success": "Simulation",
+      "scope": "shared",
+      "owner": "Platform Governance",
+      "runtime": "simulation",
+      "workflow": "vulnerability",
+      "purpose": "Discover all compartment nodes, save inventory, and re-fetch before serial remediation with approval and recovery gates.",
+      "allowedTools": [
+        "inventory",
+        "scanner",
+        "kubernetes",
+        "package-manager",
+        "health"
+      ]
+    },
+    {
+      "id": "tpls-management",
+      "name": "TLS Certificate Management Agent",
+      "domain": "Security & certificates",
+      "success": "Simulation",
+      "scope": "shared",
+      "owner": "Platform Governance",
+      "runtime": "simulation",
+      "workflow": "tls",
+      "purpose": "Create or renew a team certificate candidate, review its binding and promote only after verification.",
+      "allowedTools": [
+        "cmc",
+        "certificate-validator",
+        "github",
+        "deployment",
+        "health"
+      ]
+    },
+    {
+      "id": "incident-triage",
+      "name": "Incident Triage Agent",
+      "domain": "Incident response",
+      "success": "Simulation",
+      "scope": "shared",
+      "owner": "Platform Governance",
+      "runtime": "simulation",
+      "workflow": "incident",
+      "purpose": "Durable ticket triage, read-only diagnosis, reviewed change, recovery and explicit customer validation.",
+      "allowedTools": [
+        "jira",
+        "knowledge",
+        "metrics",
+        "github",
+        "deployment",
+        "health"
+      ]
+    },
+    {
+      "id": "5070de6b-a504-4dee-a494-b27dab1b3c73",
+      "scope": "team",
+      "owner": "EE Orchestration",
+      "name": "DNS Resolution",
+      "domain": "DNS Resolution",
+      "success": "New",
+      "organizationId": "ee-orchestration",
+      "createdAt": "2026-09-24T16:58:28.673Z"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "REQ-23d8639d",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "title": "Incident Triage Agent",
+      "organizationId": "ee-orchestration",
+      "requester": "Michael Kabongo",
+      "agentId": "incident-triage",
+      "agentName": "Incident Triage Agent",
+      "risk": "high",
+      "createdAt": "2026-10-14T18:17:35.259Z",
+      "status": "awaiting_approval",
+      "mode": "simulation"
+    },
+    {
+      "id": "REQ-c57ae8c4",
+      "runId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f",
+      "title": "Ticket Management Agent",
+      "organizationId": "ee-orchestration",
+      "requester": "Michael Kabongo",
+      "agentId": "ticket-management",
+      "agentName": "Ticket Management Agent",
+      "risk": "low",
+      "createdAt": "2026-10-12T14:50:32.074Z",
+      "status": "completed",
+      "mode": "simulation",
+      "completedAt": "2026-10-12T14:50:33.512Z"
+    },
+    {
+      "id": "REQ-01b2ac99",
+      "runId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db",
+      "title": "Ticket Management Agent",
+      "organizationId": "ee-orchestration",
+      "requester": "Michael Kabongo",
+      "agentId": "ticket-management",
+      "agentName": "Ticket Management Agent",
+      "risk": "low",
+      "createdAt": "2026-10-12T14:09:35.306Z",
+      "status": "completed",
+      "mode": "simulation",
+      "completedAt": "2026-10-12T14:09:36.520Z"
+    },
+    {
+      "id": "REQ-a67059fc",
+      "runId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede",
+      "title": "Ticket Management Agent",
+      "organizationId": "ee-orchestration",
+      "requester": "Michael Kabongo",
+      "agentId": "ticket-management",
+      "agentName": "Ticket Management Agent",
+      "risk": "low",
+      "createdAt": "2026-10-12T13:52:44.367Z",
+      "status": "completed",
+      "mode": "simulation",
+      "completedAt": "2026-10-12T13:58:37.934Z"
+    },
+    {
+      "id": "REQ-8495",
+      "title": "Nodepool upgrade",
+      "organizationId": "ee-orchestration",
+      "requester": "Michael Kabongo",
+      "approver": "EE Orchestration Lead",
+      "risk": "high",
+      "agentId": "cluster-nodepool-upgrade",
+      "agentName": "Cluster & Nodepool Upgrade Agent",
+      "agentSelection": "automatic",
+      "status": "completed",
+      "createdAt": "2026-09-25T18:24:02.108Z",
+      "completedAt": "2026-09-25T18:24:16.448Z"
+    },
+    {
+      "id": "REQ-8494",
+      "title": "Nodepool upgrade",
+      "organizationId": "ee-orchestration",
+      "requester": "Michael Kabongo",
+      "risk": "high",
+      "status": "completed",
+      "createdAt": "2026-09-24T17:17:51.728Z",
+      "completedAt": "2026-09-24T18:13:20.534Z"
+    },
+    {
+      "id": "REQ-8492",
+      "title": "Provision a production OKE cluster",
+      "organizationId": "ee-orchestration",
+      "requester": "Jordan Lee",
+      "risk": "high",
+      "status": "completed",
+      "createdAt": "2026-09-24T14:09:25.749Z",
+      "completedAt": "2026-09-24T17:08:00.776Z"
+    }
+  ],
+  "audit": [
+    {
+      "id": "604a5cac-585f-487f-88a1-25a7e6ec567c",
+      "type": "Workflow progressed",
+      "detail": "Incident Triage Agent · RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55 · awaiting_approval · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "revision": 5,
+      "at": "2026-10-14T18:17:37.588Z"
+    },
+    {
+      "id": "f68a9631-6177-4bf3-a220-0f0cebee5335",
+      "type": "Workflow progressed",
+      "detail": "Incident Triage Agent · RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55 · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "revision": 4,
+      "at": "2026-10-14T18:17:37.086Z"
+    },
+    {
+      "id": "689f0175-d2d5-4415-9da1-03910e5f96bd",
+      "type": "Workflow progressed",
+      "detail": "Incident Triage Agent · RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55 · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "revision": 3,
+      "at": "2026-10-14T18:17:36.585Z"
+    },
+    {
+      "id": "8b4c5a52-4814-424b-bcf2-940851056cbf",
+      "type": "Workflow progressed",
+      "detail": "Incident Triage Agent · RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55 · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "revision": 2,
+      "at": "2026-10-14T18:17:36.084Z"
+    },
+    {
+      "id": "3e6968b6-1ca7-4024-8e09-53e2e7c0ec4d",
+      "type": "Workflow progressed",
+      "detail": "Incident Triage Agent · RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55 · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "revision": 1,
+      "at": "2026-10-14T18:17:35.585Z"
+    },
+    {
+      "id": "db623654-1c67-47bd-abe0-9cf7a8ad4934",
+      "type": "Workflow planned",
+      "detail": "Incident Triage Agent · RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55 · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "at": "2026-10-14T18:17:35.259Z"
+    },
+    {
+      "id": "e65ad52a-aa4e-4036-90f4-adf843ca371f",
+      "type": "Inventory scope saved",
+      "detail": "EE Orchestration · ocid1.tenancy.oc1..aaaaaaaa3xlolnkkgbndddko2mdg535moze43vh4bpmdcbopi5gmkastlb2q · ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T20:21:37.262Z"
+    },
+    {
+      "id": "85513b7c-07c6-40aa-88ea-1fb86aec6c21",
+      "type": "Compartment saved",
+      "detail": "EE Orchestration · oit-service-test",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T20:21:15.459Z"
+    },
+    {
+      "id": "41bc57cf-623b-4db6-a3a4-02e0682a03c4",
+      "type": "Inventory scope saved",
+      "detail": "EE Orchestration · ocid1.tenancy.oc1..aaaaaaaa3xlolnkkgbndddko2mdg535moze43vh4bpmdcbopi5gmkastlb2q · ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T20:20:26.203Z"
+    },
+    {
+      "id": "4ad8b2b5-1acc-45a9-acb0-7fe371abe9ff",
+      "type": "Inventory scope saved",
+      "detail": "EE Orchestration · ocid1.tenancy.oc1..aaaaaaaa3xlolnkkgbndddko2mdg535moze43vh4bpmdcbopi5gmkastlb2q · ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T20:20:23.319Z"
+    },
+    {
+      "id": "cff17036-55ea-4bd4-9c77-073ae0b718c0",
+      "type": "Inventory scope saved",
+      "detail": "EE Orchestration · ocid1.tenancy.oc1..aaaaaaaa3xlolnkkgbndddko2mdg535moze43vh4bpmdcbopi5gmkastlb2q · ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T20:20:22.164Z"
+    },
+    {
+      "id": "f6d15e50-64dc-4068-860e-a0d8b29fd427",
+      "type": "Compartment saved",
+      "detail": "EE Orchestration · oit-services-oke",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T20:20:00.016Z"
+    },
+    {
+      "id": "89361673-8de7-49cf-b7f9-b6add7b6dbec",
+      "type": "Team renamed",
+      "detail": "cman → CMAN",
+      "organizationId": "cman",
+      "at": "2026-10-12T18:05:15.728323+00:00"
+    },
+    {
+      "id": "5530ebd2-48a2-43bf-b6d1-eb73d87cfdef",
+      "type": "Team removed",
+      "detail": "MOS FM · workspace removed",
+      "organizationId": "mos-fm",
+      "at": "2026-10-12T18:03:18.424Z"
+    },
+    {
+      "id": "90be05c4-c6bb-4b22-9e2f-0cc610c6cd16",
+      "type": "Team removed",
+      "detail": "OKE Suite Development and Support · workspace removed",
+      "organizationId": "oke-suite-development-and-support",
+      "at": "2026-10-12T18:00:21.441Z"
+    },
+    {
+      "id": "d0079276-3f7c-4ffd-80b3-b94fce890110",
+      "type": "Team onboarded",
+      "detail": "APEX Platform Services · workspace created",
+      "organizationId": "apex-platform-services",
+      "at": "2026-10-12T18:00:21.441Z"
+    },
+    {
+      "id": "8cbe1086-38e5-4131-b322-319fed1d047f",
+      "type": "Team onboarded",
+      "detail": "cman · workspace created",
+      "organizationId": "cman",
+      "at": "2026-10-12T18:00:21.441Z"
+    },
+    {
+      "id": "cc60a5ec-ea0a-4cee-b619-a6c4b43ad839",
+      "type": "Team onboarded",
+      "detail": "ASD · workspace created",
+      "organizationId": "asd",
+      "at": "2026-10-12T18:00:21.440Z"
+    },
+    {
+      "id": "3ce13c45-ca46-4976-a83f-01958d67db3b",
+      "type": "Agent restored",
+      "detail": "Vulnerability Remediation Agent · restored to shared registry",
+      "at": "2026-10-12T14:56:20.893654+00:00"
+    },
+    {
+      "id": "968a11b3-672c-4cf1-b209-036c4683942c",
+      "type": "Platform agent deleted",
+      "detail": "Ticket Management Agent · removed by platform admin",
+      "at": "2026-10-12T14:52:39.686Z"
+    },
+    {
+      "id": "f7cd2ae4-c51a-45cb-9684-c9d8f935decc",
+      "type": "Workflow progressed",
+      "detail": "Ticket Management Agent · RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f · completed · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f",
+      "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2",
+      "revision": 3,
+      "at": "2026-10-12T14:50:33.512Z"
+    },
+    {
+      "id": "c8d2cc5f-5a64-4fdc-a8b6-8497c384614c",
+      "type": "Workflow progressed",
+      "detail": "Ticket Management Agent · RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f",
+      "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2",
+      "revision": 2,
+      "at": "2026-10-12T14:50:33.012Z"
+    },
+    {
+      "id": "20bd8ae7-b1ac-4347-9d54-104924bc1229",
+      "type": "Workflow progressed",
+      "detail": "Ticket Management Agent · RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f",
+      "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2",
+      "revision": 1,
+      "at": "2026-10-12T14:50:32.511Z"
+    },
+    {
+      "id": "f3a2e5be-1f52-4d6c-ac6f-a831c02ffd1a",
+      "type": "Workflow planned",
+      "detail": "Ticket Management Agent · RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f",
+      "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2",
+      "at": "2026-10-12T14:50:32.075Z"
+    },
+    {
+      "id": "aa86ab91-2b54-4152-90dc-84e5d4bcaf4b",
+      "type": "Jira connection saved",
+      "detail": "EE Orchestration · EEOKE · https://jira.oraclecorp.com/jira",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T14:46:21.196Z"
+    },
+    {
+      "id": "374c2afb-a83f-4ea7-ad2a-3be409079856",
+      "type": "Jira intake configured",
+      "detail": "EE Orchestration · EEORCH",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T14:31:25.128Z"
+    },
+    {
+      "id": "f6a01bdd-fc5e-4045-a153-0ef488f9e886",
+      "type": "Jira intake configured",
+      "detail": "EE Orchestration · EEORCH",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T14:29:45.430Z"
+    },
+    {
+      "id": "e67a0811-6b0d-41cd-a7d0-ed75a741874f",
+      "type": "Jira intake configured",
+      "detail": "EEORCH · incident · live activation pending",
+      "organizationId": "ee-orchestration",
+      "at": "2026-10-12T14:27:08.281370+00:00"
+    },
+    {
+      "id": "13ac9ec3-5e77-48be-88ed-cf2336090475",
+      "type": "Jira intake configured",
+      "detail": "EEOKE · service_request · live activation pending",
+      "organizationId": "oke-suite-development-and-support",
+      "at": "2026-10-12T14:27:08.281191+00:00"
+    },
+    {
+      "id": "cab609e8-beca-47b8-864d-5d64b49ccf43",
+      "type": "Workflow progressed",
+      "detail": "Ticket Management Agent · RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db · completed · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "revision": 3,
+      "at": "2026-10-12T14:09:36.520Z"
+    },
+    {
+      "id": "8376d3a7-78ff-4339-b8d1-8df22e06a31a",
+      "type": "Workflow progressed",
+      "detail": "Ticket Management Agent · RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "revision": 2,
+      "at": "2026-10-12T14:09:36.019Z"
+    },
+    {
+      "id": "b94700ef-7c04-47c4-b783-d3796c873f0d",
+      "type": "Workflow progressed",
+      "detail": "Ticket Management Agent · RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "revision": 1,
+      "at": "2026-10-12T14:09:35.521Z"
+    },
+    {
+      "id": "be842cb8-8f23-4551-abf0-07f87bad1fda",
+      "type": "Workflow planned",
+      "detail": "Ticket Management Agent · RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "at": "2026-10-12T14:09:35.306Z"
+    },
+    {
+      "id": "8d650e26-2d0e-4f9d-bc5d-63404f3f2eec",
+      "type": "Workflow advance",
+      "detail": "Ticket Management Agent · RUN-f43d64ad-64f1-46b8-a03b-feb52278bede · completed · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "revision": 3,
+      "at": "2026-10-12T13:58:37.934Z"
+    },
+    {
+      "id": "ff7aa4ee-9312-41af-a97b-372c677b22c7",
+      "type": "Workflow advance",
+      "detail": "Ticket Management Agent · RUN-f43d64ad-64f1-46b8-a03b-feb52278bede · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "revision": 2,
+      "at": "2026-10-12T13:58:34.670Z"
+    },
+    {
+      "id": "63f46c7c-cbc5-41a6-9968-c10d5d5900b8",
+      "type": "Workflow advance",
+      "detail": "Ticket Management Agent · RUN-f43d64ad-64f1-46b8-a03b-feb52278bede · ready · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "revision": 1,
+      "at": "2026-10-12T13:58:16.902Z"
+    },
+    {
+      "id": "3b64fd57-dd83-4f8b-879a-7bf96f75050a",
+      "type": "Workflow planned",
+      "detail": "Ticket Management Agent · RUN-f43d64ad-64f1-46b8-a03b-feb52278bede · simulation",
+      "organizationId": "ee-orchestration",
+      "runId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede",
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "at": "2026-10-12T13:52:44.367Z"
+    },
+    {
+      "id": "45d74c8e-0471-4744-b892-eea85743b3d3",
+      "type": "Platform agent deleted",
+      "detail": "Notification Agent · removed by platform admin",
+      "at": "2026-10-12T13:33:12.577Z"
+    },
+    {
+      "id": "e6e1dc4e-c215-42c1-804b-afb4b233fba7",
+      "type": "Platform agent deleted",
+      "detail": "Cluster & Nodepool Upgrade Agent · removed by platform admin",
+      "at": "2026-10-12T13:32:26.831Z"
+    },
+    {
+      "id": "5d96956f-ba09-4521-824a-73ae32eae965",
+      "type": "Platform agent deleted",
+      "detail": "OKE Cluster Provisioning Agent · removed by platform admin",
+      "at": "2026-10-12T13:32:16.582Z"
+    },
+    {
+      "id": "cf304217-6b57-4119-a6cb-dff17d81a8e9",
+      "type": "Platform agent deleted",
+      "detail": "APEX Vulnerabilities Agent · removed by platform admin",
+      "at": "2026-10-12T13:32:09.884Z"
+    },
+    {
+      "id": "4172eb10-a351-438a-af35-c8aed38c6fcd",
+      "type": "Platform agent deleted",
+      "detail": "OKE Vulnerabilities Agent · removed by platform admin",
+      "at": "2026-10-12T13:32:07.168Z"
+    },
+    {
+      "id": "7dd189d4-832a-4ccc-9d8c-7a84c787818d",
+      "type": "Platform agent deleted",
+      "detail": "OKE Troubleshooting Agent · removed by platform admin",
+      "at": "2026-10-12T13:31:52.176Z"
+    },
+    {
+      "id": "702b892b-0711-4a99-bce1-e6adc3a2f38c",
+      "type": "Platform agent deleted",
+      "detail": "APEX Troubleshooting Agent · removed by platform admin",
+      "at": "2026-10-12T13:31:48.670Z"
+    },
+    {
+      "id": "08e0c271-9e0c-47d9-8a6a-cfc430f3695a",
+      "type": "Dedicated agent deleted",
+      "detail": "TEST1 AGENT · EE Orchestration",
+      "at": "2026-09-25T18:28:03.309Z"
+    },
+    {
+      "id": "3806c636-0557-44d9-b270-cc8acbb732cc",
+      "type": "Dedicated agent registered",
+      "detail": "TEST1 AGENT · EE Orchestration · team-scoped",
+      "at": "2026-09-25T18:27:10.406Z"
+    },
+    {
+      "id": "d038f441-2f64-456e-9cdb-60cbc6af9c02",
+      "type": "Action validated",
+      "detail": "Nodepool upgrade · REQ-8495",
+      "at": "2026-09-25T18:24:16.448Z"
+    },
+    {
+      "id": "fe545391-8950-4131-8c2d-f2bd790cac0c",
+      "type": "Approval granted",
+      "detail": "Nodepool upgrade · REQ-8495 · Michael Kabongo",
+      "at": "2026-09-25T18:24:14.945Z"
+    },
+    {
+      "id": "01a8fc02-1397-44c5-b3bf-424b0e526ab5",
+      "type": "Approval requested",
+      "detail": "Nodepool upgrade · REQ-8495 · Cluster & Nodepool Upgrade Agent (automatic) · EE Orchestration Lead",
+      "at": "2026-09-25T18:24:02.109Z"
+    },
+    {
+      "id": "83b4869b-1cb0-4053-9da0-4124d9fdfb5c",
+      "type": "Dedicated agent deleted",
+      "detail": "MM Agent · EE Orchestration",
+      "at": "2026-09-25T16:56:34.562Z"
+    },
+    {
+      "id": "ec543372-6eee-44ac-899e-27c4afbaee45",
+      "type": "Dedicated agent registered",
+      "detail": "MM Agent · EE Orchestration · team-scoped",
+      "at": "2026-09-25T16:56:23.083Z"
+    },
+    {
+      "id": "fab0a1fb-cd54-4a55-9d76-aa8656cd536c",
+      "type": "Action validated",
+      "detail": "Nodepool upgrade · REQ-8494",
+      "at": "2026-09-24T18:13:20.534Z"
+    },
+    {
+      "id": "991e79ea-d88f-4bb0-bde6-ecd84e271e2d",
+      "type": "Approval granted",
+      "detail": "Nodepool upgrade · REQ-8494 · Michael Kabongo",
+      "at": "2026-09-24T18:13:19.031Z"
+    },
+    {
+      "id": "bdc82257-bd47-4019-b866-443f6cf0dbb1",
+      "type": "Approval routing updated",
+      "detail": "EE Orchestration · EE Orchestration Lead, Kip Larsen, Michael Kabongo",
+      "at": "2026-09-24T18:07:04.741Z"
+    },
+    {
+      "id": "54437849-f450-4700-a5cf-71a24718093f",
+      "type": "Approval routing updated",
+      "detail": "EE Orchestration · EE Orchestration Lead, Kip Larsen",
+      "at": "2026-09-24T18:06:47.592Z"
+    },
+    {
+      "id": "bbf9adb6-2584-487a-acd6-f77ead1cda24",
+      "type": "Approval requested",
+      "detail": "Nodepool upgrade · REQ-8494",
+      "at": "2026-09-24T17:17:51.728Z"
+    },
+    {
+      "id": "cc71aa42-b7fe-4c24-a887-a5ed8c4a5ca8",
+      "type": "Action validated",
+      "detail": "Provision a production OKE cluster · REQ-8492",
+      "at": "2026-09-24T17:08:00.776Z"
+    },
+    {
+      "id": "7ed5cc28-7656-4e05-9adf-1e1744b4ea5b",
+      "type": "Approval granted",
+      "detail": "Provision a production OKE cluster · REQ-8492 · Michael Kabongo",
+      "at": "2026-09-24T17:07:59.275Z"
+    },
+    {
+      "id": "9dcce327-b2d8-434a-8b77-450d7152457c",
+      "type": "Policy enabled",
+      "detail": "Tenant data isolation",
+      "at": "2026-09-24T17:05:56.528Z"
+    },
+    {
+      "id": "fe444c47-cf04-4b59-994c-c06295a3f16a",
+      "type": "Policy paused",
+      "detail": "Tenant data isolation",
+      "at": "2026-09-24T17:05:54.950Z"
+    },
+    {
+      "id": "f11ecbe0-b049-4154-9d95-afbb54e680e7",
+      "type": "Policy enabled",
+      "detail": "Production change approval",
+      "at": "2026-09-24T17:05:49.419Z"
+    },
+    {
+      "id": "23e7b767-23bd-4ecd-a198-2c8ad61214a0",
+      "type": "Policy paused",
+      "detail": "Production change approval",
+      "at": "2026-09-24T17:05:48.038Z"
+    },
+    {
+      "id": "12a23c83-b834-4ef9-b724-0417065e92a3",
+      "type": "Dedicated agent deleted",
+      "detail": "OS Patching · Computer Ops",
+      "at": "2026-09-24T17:00:01.391Z"
+    },
+    {
+      "id": "707bad1b-690f-4464-a6d0-8874fecb70fe",
+      "type": "Dedicated agent registered",
+      "detail": "OS Patching · Computer Ops · team-scoped",
+      "at": "2026-09-24T16:59:35.405Z"
+    },
+    {
+      "id": "f56e0aee-98ac-4659-927e-416c659e38ab",
+      "type": "Dedicated agent registered",
+      "detail": "DNS Resolution · EE Orchestration · team-scoped",
+      "at": "2026-09-24T16:58:28.674Z"
+    },
+    {
+      "id": "e2fd614e-e3cd-42e3-bfb9-3535a5447c08",
+      "type": "Dedicated agent deleted",
+      "detail": "MICHAEL TEST · EE Orchestration",
+      "at": "2026-09-24T16:29:27.493Z"
+    },
+    {
+      "id": "561d292c-1a9b-452a-9e2f-c8c63f49b2bb",
+      "type": "Dedicated agent registered",
+      "detail": "MICHAEL TEST · EE Orchestration · team-scoped",
+      "at": "2026-09-24T16:24:16.183Z"
+    },
+    {
+      "id": "e39bfc05-5f59-4bd9-91ea-b3936553a1a6",
+      "type": "Team onboarded",
+      "detail": "MOS FM · workspace created",
+      "at": "2026-09-24T15:15:08.534Z"
+    },
+    {
+      "id": "112eb261-a492-4076-bc60-d95f865a2bfb",
+      "type": "Team removed",
+      "detail": "test · workspace deleted",
+      "at": "2026-09-24T15:12:59.418Z"
+    },
+    {
+      "id": "19390121-18d4-479a-93d9-0bd80ea05297",
+      "type": "Team onboarded",
+      "detail": "test · workspace created",
+      "at": "2026-09-24T15:12:50.814Z"
+    },
+    {
+      "id": "9166142e-9d06-46fa-8c4e-15507b6db851",
+      "type": "Team removed",
+      "detail": "Test · workspace deleted",
+      "at": "2026-09-24T15:11:02.551Z"
+    },
+    {
+      "id": "90767836-910f-417d-85fa-78c5af2ee780",
+      "type": "Team onboarded",
+      "detail": "Test · workspace created",
+      "at": "2026-09-24T15:10:55.039Z"
+    },
+    {
+      "id": "9a556c8a-4c62-43de-abcb-86bcc82748d2",
+      "type": "Team removed",
+      "detail": "TEST · workspace deleted",
+      "at": "2026-09-24T15:09:39.741Z"
+    },
+    {
+      "id": "79985506-6a24-477e-a7d8-8ca38c29163f",
+      "type": "Organization onboarded",
+      "detail": "TEST · tenant created",
+      "at": "2026-09-24T15:02:59.378Z"
+    }
+  ],
+  "deletedSharedAgentIds": [
+    "apex-troubleshooting",
+    "oke-troubleshooting",
+    "apex-vulnerabilities",
+    "oke-cluster-provisioning",
+    "cluster-nodepool-upgrade",
+    "notification",
+    "ticket-management"
+  ],
+  "usage": [
+    {
+      "organizationId": "ee-orchestration",
+      "period": "2026-09",
+      "modelCost": 1180,
+      "toolCost": 470,
+      "infrastructureCost": 610,
+      "executions": 1380,
+      "budget": 4200,
+      "previousMonthCost": 3560,
+      "drivers": [
+        {
+          "name": "OKE Cluster Provisioning Agent",
+          "type": "Agent",
+          "cost": 720
+        },
+        {
+          "name": "OCI resources",
+          "type": "Infrastructure",
+          "cost": 610
+        },
+        {
+          "name": "Model inference",
+          "type": "Intelligence",
+          "cost": 540
+        }
+      ]
+    },
+    {
+      "organizationId": "computer-ops",
+      "period": "2026-09",
+      "modelCost": 860,
+      "toolCost": 520,
+      "infrastructureCost": 740,
+      "executions": 970,
+      "budget": 3600,
+      "previousMonthCost": 3090,
+      "drivers": [
+        {
+          "name": "OKE Troubleshooting Agent",
+          "type": "Agent",
+          "cost": 640
+        },
+        {
+          "name": "Vulnerability scanners",
+          "type": "Tool",
+          "cost": 520
+        },
+        {
+          "name": "OCI resources",
+          "type": "Infrastructure",
+          "cost": 470
+        }
+      ]
+    },
+    {
+      "organizationId": "asd",
+      "period": "2026-10",
+      "modelCost": 1180,
+      "toolCost": 470,
+      "infrastructureCost": 610,
+      "executions": 1380,
+      "budget": 4200,
+      "previousMonthCost": 3560,
+      "drivers": [
+        {
+          "name": "OKE Cluster Provisioning Agent",
+          "type": "Agent",
+          "cost": 720
+        },
+        {
+          "name": "OCI resources",
+          "type": "Infrastructure",
+          "cost": 610
+        },
+        {
+          "name": "Model inference",
+          "type": "Intelligence",
+          "cost": 540
+        }
+      ]
+    },
+    {
+      "organizationId": "cman",
+      "period": "2026-10",
+      "modelCost": 860,
+      "toolCost": 520,
+      "infrastructureCost": 740,
+      "executions": 970,
+      "budget": 3600,
+      "previousMonthCost": 3090,
+      "drivers": [
+        {
+          "name": "OKE Troubleshooting Agent",
+          "type": "Agent",
+          "cost": 640
+        },
+        {
+          "name": "Vulnerability scanners",
+          "type": "Tool",
+          "cost": 520
+        },
+        {
+          "name": "OCI resources",
+          "type": "Infrastructure",
+          "cost": 470
+        }
+      ]
+    },
+    {
+      "organizationId": "apex-platform-services",
+      "period": "2026-10",
+      "modelCost": 640,
+      "toolCost": 260,
+      "infrastructureCost": 320,
+      "executions": 540,
+      "budget": 2800,
+      "previousMonthCost": 1760,
+      "drivers": [
+        {
+          "name": "Ticket Management Agent",
+          "type": "Agent",
+          "cost": 380
+        },
+        {
+          "name": "Model inference",
+          "type": "Intelligence",
+          "cost": 330
+        },
+        {
+          "name": "Jira integration",
+          "type": "Tool",
+          "cost": 180
+        }
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55",
+      "organizationId": "ee-orchestration",
+      "agentId": "incident-triage",
+      "agentName": "Incident Triage Agent",
+      "title": "Incident Triage Agent",
+      "requester": "Michael Kabongo",
+      "mode": "simulation",
+      "plan": {
+        "version": 1,
+        "runbook": "mvp/incident-triage@1",
+        "agentId": "incident-triage",
+        "organizationId": "ee-orchestration",
+        "target": {
+          "tenancy": "demo-ee-orchestration",
+          "region": "demo-region",
+          "cluster": "demo-cluster",
+          "namespace": "ee-orchestration",
+          "repository": "demo/ee-orchestration",
+          "sourcePaths": [
+            "deploy/values.yaml",
+            "certificates/public.pem"
+          ],
+          "allowedNodes": [
+            "node-1",
+            "node-2",
+            "node-3"
+          ],
+          "allowedTools": [
+            "inventory",
+            "scanner",
+            "kubernetes",
+            "package-manager",
+            "health",
+            "knowledge",
+            "github",
+            "deployment",
+            "jira",
+            "cmc",
+            "certificate-validator",
+            "notification",
+            "metrics"
+          ]
+        },
+        "input": {
+          "ticket": "INC-101",
+          "summary": "Ingress returns HTTP 503",
+          "sourcePath": "deploy/values.yaml"
+        },
+        "steps": [
+          {
+            "name": "Triage ticket and resolve target",
+            "tool": "jira"
+          },
+          {
+            "name": "Retrieve applicable runbook",
+            "tool": "knowledge"
+          },
+          {
+            "name": "Read-only diagnosis and recovery plan",
+            "tool": "metrics"
+          },
+          {
+            "name": "Prepare source change proposal",
+            "tool": "github"
+          },
+          {
+            "name": "Human approval and required checks",
+            "tool": "github",
+            "gate": "approval"
+          },
+          {
+            "name": "Deploy approved merged source",
+            "tool": "deployment"
+          },
+          {
+            "name": "Verify technical recovery",
+            "tool": "health"
+          },
+          {
+            "name": "Await customer validation",
+            "tool": "jira",
+            "gate": "customer"
+          },
+          {
+            "name": "Record RCA and resolve ticket",
+            "tool": "jira"
+          }
+        ],
+        "mode": "simulation"
+      },
+      "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e",
+      "status": "awaiting_approval",
+      "cursor": 4,
+      "receipts": [
+        {
+          "id": "fc454897-0d36-4db9-b200-782aee6ae19c",
+          "step": 0,
+          "name": "Triage ticket and resolve target",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55:0",
+            "result": "Triage ticket and resolve target simulated successfully"
+          },
+          "at": "2026-10-14T18:17:35.584Z",
+          "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e"
+        },
+        {
+          "id": "ed70204b-866b-4dce-906f-a8547a0adc6a",
+          "step": 1,
+          "name": "Retrieve applicable runbook",
+          "tool": "knowledge",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55:1",
+            "result": "Retrieve applicable runbook simulated successfully"
+          },
+          "at": "2026-10-14T18:17:36.084Z",
+          "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e"
+        },
+        {
+          "id": "6f4a4d4f-4860-4769-b959-6a83471d3e5c",
+          "step": 2,
+          "name": "Read-only diagnosis and recovery plan",
+          "tool": "metrics",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55:2",
+            "result": "Read-only diagnosis and recovery plan simulated successfully",
+            "diagnosis": {
+              "cause": "Illustrative hypothesis from simulated telemetry",
+              "confidence": "unknown",
+              "evidence": [
+                "Simulated metrics and events"
+              ],
+              "recommendation": "Review the applicable team runbook and source proposal"
+            }
+          },
+          "at": "2026-10-14T18:17:36.585Z",
+          "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e"
+        },
+        {
+          "id": "95cb6287-c3f1-41de-ac58-8367b4ae7d92",
+          "step": 3,
+          "name": "Prepare source change proposal",
+          "tool": "github",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55:3",
+            "result": "Prepare source change proposal simulated successfully",
+            "proposal": "simulation://RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55/source-proposal",
+            "sourcePaths": [
+              "deploy/values.yaml",
+              "certificates/public.pem"
+            ],
+            "checks": "simulated passing checks; no real PR or merge",
+            "mergedCommit": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e"
+          },
+          "at": "2026-10-14T18:17:37.086Z",
+          "planHash": "f949d3893c50e6a5b70d0eef4705d292a121d5da22b8555f8e21bba0db15da3e"
+        }
+      ],
+      "approvals": [],
+      "createdAt": "2026-10-14T18:17:35.259Z",
+      "revision": 5,
+      "autoRun": true,
+      "updatedAt": "2026-10-14T18:17:37.588Z"
+    },
+    {
+      "id": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f",
+      "organizationId": "ee-orchestration",
+      "agentId": "ticket-management",
+      "agentName": "Ticket Management Agent",
+      "title": "Ticket Management Agent",
+      "requester": "Michael Kabongo",
+      "mode": "simulation",
+      "plan": {
+        "version": 1,
+        "runbook": "mvp/ticket-management@1",
+        "agentId": "ticket-management",
+        "organizationId": "ee-orchestration",
+        "target": {
+          "tenancy": "demo-ee-orchestration",
+          "region": "demo-region",
+          "cluster": "demo-cluster",
+          "namespace": "ee-orchestration",
+          "repository": "demo/ee-orchestration",
+          "sourcePaths": [
+            "deploy/values.yaml",
+            "certificates/public.pem"
+          ],
+          "allowedNodes": [
+            "node-1",
+            "node-2",
+            "node-3"
+          ],
+          "allowedTools": [
+            "inventory",
+            "scanner",
+            "kubernetes",
+            "package-manager",
+            "health",
+            "knowledge",
+            "github",
+            "deployment",
+            "jira",
+            "cmc",
+            "certificate-validator",
+            "notification",
+            "metrics"
+          ]
+        },
+        "input": {
+          "ticket": "OPS-101",
+          "summary": "Service request: inspect application availability",
+          "description": "No additional description supplied",
+          "requestType": "auto"
+        },
+        "steps": [
+          {
+            "name": "Read and classify ticket",
+            "tool": "jira"
+          },
+          {
+            "name": "Resolve owner and applicable knowledge",
+            "tool": "knowledge"
+          },
+          {
+            "name": "Prepare customer response",
+            "tool": "jira"
+          }
+        ],
+        "mode": "simulation"
+      },
+      "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2",
+      "status": "completed",
+      "cursor": 3,
+      "receipts": [
+        {
+          "id": "2beeb2f9-9f4b-414f-84cf-fbe87063807a",
+          "step": 0,
+          "name": "Read and classify ticket",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f:0",
+            "result": "Read and classify ticket simulated successfully",
+            "triage": {
+              "ticket": "OPS-101",
+              "category": "application",
+              "agentId": "apex-troubleshooting",
+              "reason": "Read-only application diagnosis can start from the reported symptom.",
+              "owner": "ee-orchestration operations",
+              "suggestedResponse": "We have received OPS-101 and prepared an initial work routing recommendation.",
+              "mode": "simulation"
+            }
+          },
+          "at": "2026-10-12T14:50:32.511Z",
+          "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2"
+        },
+        {
+          "id": "108b9c7a-ef19-4577-a254-f5efb90aba5b",
+          "step": 1,
+          "name": "Resolve owner and applicable knowledge",
+          "tool": "knowledge",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f:1",
+            "result": "Resolve owner and applicable knowledge simulated successfully",
+            "triage": {
+              "ticket": "OPS-101",
+              "category": "application",
+              "agentId": "apex-troubleshooting",
+              "reason": "Read-only application diagnosis can start from the reported symptom.",
+              "owner": "ee-orchestration operations",
+              "suggestedResponse": "We have received OPS-101 and prepared an initial work routing recommendation.",
+              "mode": "simulation"
+            }
+          },
+          "at": "2026-10-12T14:50:33.012Z",
+          "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2"
+        },
+        {
+          "id": "d9476c5e-0026-4e72-903e-e3fe88dabb42",
+          "step": 2,
+          "name": "Prepare customer response",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-1b863162-b90c-40aa-9a86-de040e4e8e8f:2",
+            "result": "Prepare customer response simulated successfully",
+            "triage": {
+              "ticket": "OPS-101",
+              "category": "application",
+              "agentId": "apex-troubleshooting",
+              "reason": "Read-only application diagnosis can start from the reported symptom.",
+              "owner": "ee-orchestration operations",
+              "suggestedResponse": "We have received OPS-101 and prepared an initial work routing recommendation.",
+              "mode": "simulation"
+            }
+          },
+          "at": "2026-10-12T14:50:33.512Z",
+          "planHash": "eca996a9f1d3a733ac3a608bbd9a1258c7e4fcb40755e4c46c961ec1ecaa0ee2"
+        }
+      ],
+      "approvals": [],
+      "createdAt": "2026-10-12T14:50:32.074Z",
+      "revision": 3,
+      "autoRun": true,
+      "updatedAt": "2026-10-12T14:50:33.512Z",
+      "completedAt": "2026-10-12T14:50:33.512Z"
+    },
+    {
+      "id": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db",
+      "organizationId": "ee-orchestration",
+      "agentId": "ticket-management",
+      "agentName": "Ticket Management Agent",
+      "title": "Ticket Management Agent",
+      "requester": "Michael Kabongo",
+      "mode": "simulation",
+      "plan": {
+        "version": 1,
+        "runbook": "mvp/ticket-management@1",
+        "agentId": "ticket-management",
+        "organizationId": "ee-orchestration",
+        "target": {
+          "tenancy": "demo-ee-orchestration",
+          "region": "demo-region",
+          "cluster": "demo-cluster",
+          "namespace": "ee-orchestration",
+          "repository": "demo/ee-orchestration",
+          "sourcePaths": [
+            "deploy/values.yaml",
+            "certificates/public.pem"
+          ],
+          "allowedNodes": [
+            "node-1",
+            "node-2",
+            "node-3"
+          ],
+          "allowedTools": [
+            "inventory",
+            "scanner",
+            "kubernetes",
+            "package-manager",
+            "health",
+            "knowledge",
+            "github",
+            "deployment",
+            "jira",
+            "cmc",
+            "certificate-validator",
+            "notification",
+            "metrics"
+          ]
+        },
+        "input": {
+          "ticket": "OPS-101",
+          "summary": "Service request: inspect application availability"
+        },
+        "steps": [
+          {
+            "name": "Read and classify ticket",
+            "tool": "jira"
+          },
+          {
+            "name": "Resolve owner and applicable knowledge",
+            "tool": "knowledge"
+          },
+          {
+            "name": "Prepare customer response",
+            "tool": "jira"
+          }
+        ],
+        "mode": "simulation"
+      },
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "status": "completed",
+      "cursor": 3,
+      "receipts": [
+        {
+          "id": "6af0029b-b2fc-469e-95e8-4ea2134da6a0",
+          "step": 0,
+          "name": "Read and classify ticket",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db:0",
+            "result": "Read and classify ticket simulated successfully"
+          },
+          "at": "2026-10-12T14:09:35.520Z",
+          "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b"
+        },
+        {
+          "id": "b49e965d-68af-4626-aab1-c803b7333abc",
+          "step": 1,
+          "name": "Resolve owner and applicable knowledge",
+          "tool": "knowledge",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db:1",
+            "result": "Resolve owner and applicable knowledge simulated successfully"
+          },
+          "at": "2026-10-12T14:09:36.019Z",
+          "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b"
+        },
+        {
+          "id": "7224d5f0-c344-420c-900c-edc2bf11f17e",
+          "step": 2,
+          "name": "Prepare customer response",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-d254e088-dc6e-42f9-8513-5eb762f5a7db:2",
+            "result": "Prepare customer response simulated successfully"
+          },
+          "at": "2026-10-12T14:09:36.520Z",
+          "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b"
+        }
+      ],
+      "approvals": [],
+      "createdAt": "2026-10-12T14:09:35.306Z",
+      "revision": 3,
+      "autoRun": true,
+      "updatedAt": "2026-10-12T14:09:36.520Z",
+      "completedAt": "2026-10-12T14:09:36.520Z"
+    },
+    {
+      "id": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede",
+      "organizationId": "ee-orchestration",
+      "agentId": "ticket-management",
+      "agentName": "Ticket Management Agent",
+      "title": "Ticket Management Agent",
+      "requester": "Michael Kabongo",
+      "mode": "simulation",
+      "plan": {
+        "version": 1,
+        "runbook": "mvp/ticket-management@1",
+        "agentId": "ticket-management",
+        "organizationId": "ee-orchestration",
+        "target": {
+          "tenancy": "demo-ee-orchestration",
+          "region": "demo-region",
+          "cluster": "demo-cluster",
+          "namespace": "ee-orchestration",
+          "repository": "demo/ee-orchestration",
+          "sourcePaths": [
+            "deploy/values.yaml",
+            "certificates/public.pem"
+          ],
+          "allowedNodes": [
+            "node-1",
+            "node-2",
+            "node-3"
+          ],
+          "allowedTools": [
+            "inventory",
+            "scanner",
+            "kubernetes",
+            "package-manager",
+            "health",
+            "knowledge",
+            "github",
+            "deployment",
+            "jira",
+            "cmc",
+            "certificate-validator",
+            "notification",
+            "metrics"
+          ]
+        },
+        "input": {
+          "ticket": "OPS-101",
+          "summary": "Service request: inspect application availability"
+        },
+        "steps": [
+          {
+            "name": "Read and classify ticket",
+            "tool": "jira"
+          },
+          {
+            "name": "Resolve owner and applicable knowledge",
+            "tool": "knowledge"
+          },
+          {
+            "name": "Prepare customer response",
+            "tool": "jira"
+          }
+        ],
+        "mode": "simulation"
+      },
+      "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b",
+      "status": "completed",
+      "cursor": 3,
+      "receipts": [
+        {
+          "id": "5adf5fe4-2efa-47aa-9881-9773be86008d",
+          "step": 0,
+          "name": "Read and classify ticket",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede:0",
+            "result": "Read and classify ticket simulated successfully"
+          },
+          "at": "2026-10-12T13:58:16.902Z",
+          "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b"
+        },
+        {
+          "id": "a43da95c-a69d-4b9e-93a8-7eaf74d02f6b",
+          "step": 1,
+          "name": "Resolve owner and applicable knowledge",
+          "tool": "knowledge",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede:1",
+            "result": "Resolve owner and applicable knowledge simulated successfully"
+          },
+          "at": "2026-10-12T13:58:34.670Z",
+          "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b"
+        },
+        {
+          "id": "4d909965-effc-45f2-8d2d-62bf8509fcac",
+          "step": 2,
+          "name": "Prepare customer response",
+          "tool": "jira",
+          "node": null,
+          "outcome": "passed",
+          "mode": "simulation",
+          "output": {
+            "simulated": true,
+            "target": "ee-orchestration",
+            "operationId": "RUN-f43d64ad-64f1-46b8-a03b-feb52278bede:2",
+            "result": "Prepare customer response simulated successfully"
+          },
+          "at": "2026-10-12T13:58:37.934Z",
+          "planHash": "cf8ba3a0ca0b9049216801b45627633a64f227e99e283196e16cefe2aa91713b"
+        }
+      ],
+      "approvals": [],
+      "createdAt": "2026-10-12T13:52:44.367Z",
+      "revision": 3,
+      "updatedAt": "2026-10-12T13:58:37.934Z",
+      "completedAt": "2026-10-12T13:58:37.934Z"
+    }
+  ],
+  "certificateBindings": [],
+  "resourceLocks": {
+    "ee-orchestration:demo-ee-orchestration:demo-region:demo-cluster": "RUN-3b53d984-6921-4bfe-82ce-220b1a7acf55"
+  },
+  "jiraTickets": [],
+  "inventoryProfileNames": [
+    "Devapp",
+    "prodapp",
+    "oragitd",
+    "internalnonprod",
+    "internalprod",
+    "externalnonprod",
+    "externalprod"
+  ],
+  "nodeInventoryScopes": [
+    {
+      "id": "default",
+      "organizationId": "ee-orchestration",
+      "name": "Demo compartment",
+      "tenancyId": "demo-ee-orchestration",
+      "compartmentId": "demo-compartment-ee-orchestration",
+      "region": "demo-region",
+      "adapter": "simulation",
+      "profileName": "",
+      "demoNodes": [
+        {
+          "id": "node-1",
+          "name": "node-1",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-2",
+          "name": "node-2",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-3",
+          "name": "node-3",
+          "lifecycleState": "RUNNING"
+        }
+      ]
+    },
+    {
+      "id": "default",
+      "organizationId": "computer-ops",
+      "name": "Demo compartment",
+      "tenancyId": "demo-computer-ops",
+      "compartmentId": "demo-compartment-computer-ops",
+      "region": "demo-region",
+      "adapter": "simulation",
+      "profileName": "",
+      "demoNodes": [
+        {
+          "id": "node-1",
+          "name": "node-1",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-2",
+          "name": "node-2",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-3",
+          "name": "node-3",
+          "lifecycleState": "RUNNING"
+        }
+      ]
+    },
+    {
+      "id": "default",
+      "organizationId": "asd",
+      "name": "Demo compartment",
+      "tenancyId": "demo-asd",
+      "compartmentId": "demo-compartment-asd",
+      "region": "demo-region",
+      "adapter": "simulation",
+      "profileName": "",
+      "demoNodes": [
+        {
+          "id": "node-1",
+          "name": "node-1",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-2",
+          "name": "node-2",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-3",
+          "name": "node-3",
+          "lifecycleState": "RUNNING"
+        }
+      ]
+    },
+    {
+      "id": "default",
+      "organizationId": "cman",
+      "name": "Demo compartment",
+      "tenancyId": "demo-cman",
+      "compartmentId": "demo-compartment-cman",
+      "region": "demo-region",
+      "adapter": "simulation",
+      "profileName": "",
+      "demoNodes": [
+        {
+          "id": "node-1",
+          "name": "node-1",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-2",
+          "name": "node-2",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-3",
+          "name": "node-3",
+          "lifecycleState": "RUNNING"
+        }
+      ]
+    },
+    {
+      "id": "default",
+      "organizationId": "apex-platform-services",
+      "name": "Demo compartment",
+      "tenancyId": "demo-apex-platform-services",
+      "compartmentId": "demo-compartment-apex-platform-services",
+      "region": "demo-region",
+      "adapter": "simulation",
+      "profileName": "",
+      "demoNodes": [
+        {
+          "id": "node-1",
+          "name": "node-1",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-2",
+          "name": "node-2",
+          "lifecycleState": "RUNNING"
+        },
+        {
+          "id": "node-3",
+          "name": "node-3",
+          "lifecycleState": "RUNNING"
+        }
+      ]
+    },
+    {
+      "id": "82f94de1-3a2a-482c-bbdc-549ed540e027",
+      "organizationId": "ee-orchestration",
+      "name": "Devapp / oit-services-oke",
+      "tenancyId": "ocid1.tenancy.oc1..aaaaaaaa3xlolnkkgbndddko2mdg535moze43vh4bpmdcbopi5gmkastlb2q",
+      "compartmentId": "ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+      "region": "us-phoenix-1",
+      "adapter": "oci-cli",
+      "profileName": "devapp",
+      "authMode": "security_token"
+    },
+    {
+      "id": "37a28fcd-dd7c-4b58-9a1b-dfd45298c8ad",
+      "organizationId": "ee-orchestration",
+      "name": "Devapp / oit-services-oke",
+      "compartmentName": "oit-services-oke",
+      "tenancyId": "ocid1.tenancy.oc1..aaaaaaaa3xlolnkkgbndddko2mdg535moze43vh4bpmdcbopi5gmkastlb2q",
+      "compartmentId": "ocid1.compartment.oc1.aaaaaaaaaaaaa345123",
+      "region": "us-phoenix-1",
+      "adapter": "oci-cli",
+      "profileName": "devapp",
+      "authMode": "security_token"
+    }
+  ],
+  "nodeInventories": []
+}

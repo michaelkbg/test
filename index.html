@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit — Specialist Agent Operations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=11" />
+    <style>.team-actions{display:flex;gap:15px;align-items:center}.team-delete,.danger-button{border:0;background:none;color:#c84f55;font:700 10px Manrope;cursor:pointer}.danger-button{background:#c84f55;color:#fff;border-radius:7px;padding:10px 14px}.onboard-hero{margin:-32px -32px 24px;padding:28px 32px 24px;border-radius:16px 16px 0 0;background:linear-gradient(130deg,#29285b,#7258d9);color:#fff}.onboard-hero .eyebrow{color:#d6cdfd}.onboard-hero h2{font-size:25px;margin:0 0 7px;letter-spacing:-1px}.onboard-hero p{font-size:12px;line-height:1.6;margin:0;color:#e1dcf6}.onboard-orb{float:right;width:44px;height:44px;border-radius:13px;background:rgba(255,255,255,.15);display:grid;place-items:center;font-size:21px}.onboard-label{font:700 10px Manrope;color:#4e5065;margin-bottom:7px;display:block}.onboard-input{width:100%;border:1px solid #dedee8;border-radius:8px;padding:11px 12px;font:12px Manrope;color:#34364c;background:#fff}.onboard-input:focus{outline:2px solid #d9d2ff;border-color:#735ae2}.capability-box{background:#f6f5fd;border:1px solid #e8e5fb;border-radius:9px;padding:13px;margin:3px 0 5px}.capability-box strong{font-size:10px;display:block;margin-bottom:8px}.capability-box span{display:inline-block;background:#fff;border:1px solid #e8e6f3;border-radius:5px;padding:4px 6px;margin:0 4px 5px 0;color:#65677d;font-size:9px}.form-note{font-size:9px;color:#8c8d9c;line-height:1.5;margin:0}.form-error{font-size:10px;color:#c84f55;margin:0}</style>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">◌</span><span>orbit<span>.</span></span></div><p class="brand-subtitle">SPECIALIST AGENT OPERATIONS</p>
+      <p class="nav-label">WORKSPACE</p>
+      <nav>
+        <a class="nav-item active" href="#overview"><span>▦</span>Command center</a>
+        <a class="nav-item" href="#architecture"><span>◫</span>Architecture</a>
+        <a class="nav-item" href="#teams"><span>◎</span>Team integrations</a>
+        <a class="nav-item" href="/agents.html"><span>✦</span>Agent registry</a>
+        <a class="nav-item" href="/workflows.html"><span>◉</span>Agent workspace</a>
+        <a class="nav-item" href="#tradeoffs"><span>⇄</span>GCGA &amp; Orbit</a>
+        <a class="nav-item" href="#audit"><span>▤</span>Audit trail</a>
+      </nav>
+      <div class="sidebar-footer"><div class="user"><div class="avatar">MK</div><div><strong>Michael Kabongo</strong><small>Platform admin</small></div></div></div>
+    </aside>
+    <main>
+      <header id="overview">
+        <div><p class="eyebrow">GOVERNED AI OPERATIONS <span class="live-dot"></span> ALL SYSTEMS OPERATIONAL</p><p class="subtitle">Dedicated team workspaces for governed agent workflows.</p></div>
+        <div class="header-actions"><button class="icon-button" id="notificationsBtn" aria-label="Open notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i></button><a class="avatar profile-trigger" href="/profile.html" aria-label="Open Michael Kabongo profile">MK</a></div>
+      </header>
+      <section class="hero-grid">
+        <div class="hero-card">
+          <div class="hero-copy"><p class="eyebrow">SPECIALIST AGENT OPERATIONS</p><h2>From intent to impact,<br>with governance built in.</h2><p>Operate specialist agents, run team workflows, and track outcomes with built-in approvals and oversight.</p><button class="primary" id="newRequest">Run a governed task <span>→</span></button></div>
+          <div class="orbital" aria-hidden="true"><div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div><div class="core">✦</div><span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span></div>
+        </div>
+        <div class="trust-card">
+          <div class="card-top"><div><p class="eyebrow">TRUST SCORE</p><h3>Excellent</h3></div><span class="trend">↑ 4.2%</span></div>
+          <div class="score"><span>94</span><small>/100</small></div><div class="meter"><span></span></div>
+          <div class="trust-foot"><span><b>99.98%</b> policy compliant</span><span><b>0</b> critical risks</span></div>
+          <div class="org-switch"><span>Active team</span><select id="orgSelect"><option>EE Orchestration</option><option>Computer Ops</option></select></div>
+        </div>
+      </section>
+      <section class="metrics">
+        <article><div class="metric-icon purple">✦</div><div><p>Tasks governed</p><h3>24,892</h3><small class="positive">↑ 18.4% <em>vs last month</em></small></div></article>
+        <article><div class="metric-icon orange">✓</div><div><p>Policy compliance</p><h3>99.98%</h3><small class="positive">↑ 0.2% <em>vs last month</em></small></div></article>
+        <article><div class="metric-icon blue">◴</div><div><p>Median response</p><h3>1.8s</h3><small class="positive">↓ 0.4s <em>vs last month</em></small></div></article>
+        <article><div class="metric-icon green">◉</div><div><p>Active agents</p><h3>18</h3><small><em>Across 6 domains</em></small></div></article>
+      </section>
+      <section class="panel flow-panel">
+        <div class="panel-heading"><div><p class="eyebrow">LIVE REQUEST · <span id="requestOrg">EE ORCHESTRATION</span></p><h2>Governance flow</h2></div><span class="status-pill" id="flowStatus">Awaiting approval</span></div>
+        <div class="request-line"><span class="request-avatar">J</span><div><strong id="requestText">Provision a production OKE cluster</strong><small>Requested by Jordan Lee · Platform Engineering</small></div><span class="request-id">REQ-8492</span></div>
+        <ol class="flow" id="flow"><li class="done"><span>✓</span><div><strong>Identity verified</strong><small>SSO · team and role mapped</small></div></li><li class="done"><span>✓</span><div><strong>Tenant & context resolved</strong><small id="contextText">EE Orchestration · Production</small></div></li><li class="done"><span>✓</span><div><strong>Policy evaluation</strong><small>12 controls passed · cost within threshold</small></div></li><li class="current"><span>4</span><div><strong>Human approval</strong><small>Required for production change</small></div><button class="approve" id="approveBtn">Review request</button></li><li><span>5</span><div><strong>Execute & validate</strong><small>Pending approval</small></div></li></ol>
+      </section>
+      <section class="architecture-section" id="architecture">
+        <div class="section-heading"><div><p class="eyebrow">HOW THE TEAMS CONNECT</p><h2>One governed path across eight platform layers.</h2><p>Select a layer to see its team contract, capabilities, and place in the request flow.</p></div><span class="legend"><i></i> Shared across organizations</span></div>
+        <div class="architecture-grid"><div class="layer-map">
+          <button class="layer active" data-layer="access"><b>01</b><span><strong>Access & integration</strong><small>Portal · APIs · Events · Jobs</small></span><em>→</em></button>
+          <button class="layer" data-layer="identity"><b>02</b><span><strong>Identity & tenant context</strong><small>SSO · Roles · Entitlements</small></span><em>→</em></button>
+          <button class="layer" data-layer="governance"><b>03</b><span><strong>Governance control plane</strong><small>Policy · Approval · Audit</small></span><em>→</em></button>
+          <button class="layer" data-layer="intelligence"><b>04</b><span><strong>Intelligence layer</strong><small>LLM · RAG · Agent framework</small></span><em>→</em></button>
+          <button class="layer" data-layer="agents"><b>05</b><span><strong>Specialist agents</strong><small>Reusable capabilities</small></span><em>→</em></button>
+          <button class="layer" data-layer="tools"><b>06</b><span><strong>Tools & system integration</strong><small>APIs · Adapters · MCP</small></span><em>→</em></button>
+          <button class="layer" data-layer="data"><b>07</b><span><strong>Data & knowledge</strong><small>Logs · Knowledge · Metrics</small></span><em>→</em></button>
+          <button class="layer" data-layer="safety"><b>08</b><span><strong>Infrastructure safety</strong><small>Guardrails · Recovery · Secrets</small></span><em>→</em></button>
+        </div><aside class="layer-detail" id="layerDetail"></aside></div>
+      </section>
+      <section class="teams-section" id="teams">
+        <div class="section-heading"><div><p class="eyebrow">TEAM INTEGRATION</p><h2>Onboard teams through a scalable, governed operating model.</h2></div><button class="text-button" id="addTeam">＋ Add team</button></div>
+        <div class="team-grid">
+          <article class="team-card"><div class="team-title"><span class="team-logo ee">EE</span><div><h3>EE Orchestration</h3><p>Enterprise execution orchestration</p></div><span class="connected">● Connected</span></div><div class="team-items"><span>Web portal</span><span>REST / GraphQL</span><span>Jira</span><span>Scheduled jobs</span></div><p class="team-note">Owns request intake, execution coordination, and operational handoff through the shared governance plane.</p><button class="team-action" data-org="EE Orchestration">View integration →</button></article>
+          <article class="team-card"><div class="team-title"><span class="team-logo co">CO</span><div><h3>Computer Ops</h3><p>Infrastructure operations</p></div><span class="connected">● Connected</span></div><div class="team-items"><span>Slack</span><span>OKE APIs</span><span>OCI resources</span><span>Vulnerability scans</span></div><p class="team-note">Contributes specialist capabilities and systems of record while retaining tenant isolation and policy boundaries.</p><button class="team-action" data-org="Computer Ops">View integration →</button></article>
+        </div>
+      </section>
+      <section class="admin-cost-board" id="costOverview">
+        <div class="section-heading"><div><p class="eyebrow">PLATFORM CHARGEBACK</p><h2>Cost & utilization across teams.</h2><p>Direct consumption and transparent shared-platform allocation.</p></div><a class="text-button" href="/costs.html">Open all reports →</a></div>
+        <div class="admin-cost-grid" id="adminCostGrid"></div>
+      </section>
+      <section class="panel tradeoff-section" id="tradeoffs" aria-labelledby="tradeoffTitle">
+        <div class="section-heading"><div><p class="eyebrow">LEADERSHIP DISCUSSION</p><h2 id="tradeoffTitle">GCGA &amp; Orbit: production tradeoffs</h2><p>Shared enterprise GPTs and a shared operational workspace serve different team needs.</p></div></div>
+
+        <div class="tradeoff-table-wrap" role="region" aria-label="GCGA and Orbit comparison" tabindex="0"><table class="tradeoff-table"><caption>Enterprise GPT experience described by the team versus Orbit’s proposed production role</caption><thead><tr><th scope="col">Decision area</th><th scope="col">GCGA / enterprise GPTs</th><th scope="col">Orbit</th><th scope="col">Tradeoff</th></tr></thead><tbody>
+          <tr><th scope="row">Creation &amp; sharing</th><td>Employees can create GPTs and submit a request to share them with specific organizations or across Oracle, subject to approval.</td><td>Teams use shared or team-specific specialist agents within their operational workspace.</td><td>Enterprise sharing supports broad reuse. Orbit adds team-specific operational context; enterprise sharing and onboarding requirements still apply where relevant.</td></tr>
+          <tr><th scope="row">Team visibility</th><td>Users access shared GPTs through the chat UI. In the experience described, members work in separate conversations; sharing a GPT does not itself provide a common operational run view.</td><td>Authorized team members share visibility into agent execution, approval status, workflow progress, and recorded outcomes.</td><td>Individual chat offers flexible assistance. A shared workflow view improves coordination and handoffs, but requires clear access and approval permissions.</td></tr>
+          <tr><th scope="row">Specialist execution &amp; hosting</th><td>The employee-facing GPT experience is accessed through chat; this comparison does not assess backend execution or hosting capabilities.</td><td>Production specialist-agent services could run on OCI VMs or OKE clusters and connect to approved APIs and existing automation.</td><td>Dedicated deployment supports operational integration and execution control. Orbit owners must manage credentials, resource isolation, reliability, and recovery.</td></tr>
+          <tr><th scope="row">Ownership &amp; reuse</th><td>Uses the established enterprise distribution and governance process for shared GPTs.</td><td>Coordinates operational workflows while reusing enterprise identity and each team’s existing automation where appropriate.</td><td>Validate the added operational value before funding another service. Assign one execution owner per workflow to avoid duplicate changes.</td></tr>
+        </tbody></table></div>
+      </section>
+      <section class="bottom-grid">
+        <div class="panel policies"><div class="panel-heading"><div><p class="eyebrow">POLICY POSTURE</p><h2>Controls protecting this task</h2></div><a class="text-button" href="/policies.html">Manage policies →</a></div><div class="policy-items"><div><span class="check">✓</span><p><strong>Production change approval</strong><small>Human-in-the-loop required</small></p><span class="enforced">Enforced</span></div><div><span class="check">✓</span><p><strong>Tenant data isolation</strong><small id="isolationText">EE Orchestration scope only</small></p><span class="enforced">Enforced</span></div><div><span class="check">✓</span><p><strong>Cost threshold</strong><small>Estimated run cost: $42.80</small></p><span class="enforced">Enforced</span></div></div></div>
+        <div class="panel audit" id="audit"><div class="panel-heading"><div><p class="eyebrow">IMMUTABLE AUDIT TRAIL</p><h2>Recent decisions</h2></div><a class="text-button" href="/audit.html">Open trail →</a></div><div class="audit-list"><div><span class="audit-dot green-dot"></span><p><strong>Policy pass</strong><small>Production provisioning · REQ-8492</small></p><time>Just now</time></div><div><span class="audit-dot purple-dot"></span><p><strong>Agent invoked</strong><small>Vulnerability Response · REQ-8491</small></p><time>4m ago</time></div><div><span class="audit-dot orange-dot"></span><p><strong>Approval requested</strong><small>Database schema update · REQ-8487</small></p><time>12m ago</time></div></div></div>
+      </section>
+    </main>
+    <div class="modal-backdrop" id="modal"><div class="modal"><button class="close" id="closeModal">×</button><p class="eyebrow">GOVERNED ACTION</p><h2>Approve production change</h2><p>The OKE Provisioning agent will create a production cluster. This action is within policy but requires a designated approver.</p><div class="modal-details"><span>Organization <b id="modalOrg">EE Orchestration</b></span><span>Estimated cost <b>$42.80</b></span><span>Policy checks <b>12 / 12 passed</b></span></div><div class="modal-actions"><button class="secondary" id="cancelBtn">Decline</button><button class="primary confirm" id="confirmBtn">Approve & execute →</button></div></div></div>
+    <script src="app.js?v=20260925-5"></script>
+  </body>
+</html>

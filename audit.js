@@ -1,0 +1,4 @@
+const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const api=url=>fetch(url).then(async response=>{const data=await response.json();if(!response.ok)throw Error(data.error||'Request failed');return data});
+const ago=at=>{const minutes=Math.max(0,Math.floor((Date.now()-new Date(at))/60000));return minutes<1?'Just now':minutes<60?minutes+'m ago':new Date(at).toLocaleString()};
+api('/api/state').then(state=>{document.querySelector('#eventCount').textContent=state.audit.length+' events';document.querySelector('#auditList').innerHTML=state.audit.map((event,index)=>'<article><span class="dot dot-'+(index%3)+'"></span><div><b>'+escapeHTML(event.type)+'</b><small>'+escapeHTML(event.detail)+'</small></div><time>'+ago(event.at)+'</time></article>').join('')}).catch(error=>document.querySelector('#auditList').textContent=error.message);
